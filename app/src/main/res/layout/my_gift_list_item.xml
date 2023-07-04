@@ -1,0 +1,80 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:id="@+id/giftItemContainer">
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        android:clickable="false"
+        android:longClickable="false"
+        android:linksClickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>
+
+    <TextView
+        android:id="@+id/priorityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Priority: "
+        android:layout_marginTop="8dp"
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameTextView"
+        android:clickable="false"
+        android:longClickable="false"
+        android:linksClickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+    <TextView
+        android:id="@+id/priorityValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintStart_toEndOf="@+id/priorityTextView"
+        app:layout_constraintTop_toBottomOf="@id/nameTextView"
+        tools:ignore="MissingConstraints"
+        android:clickable="false"
+        android:longClickable="false"
+        android:linksClickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>
+
+    <TextView
+        android:id="@+id/editGift"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/priorityValueTextView"
+        app:layout_constraintEnd_toStartOf="@+id/deleteGift"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/orange"
+        android:text="edit"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/deleteGift"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editGift"
+        app:layout_constraintTop_toBottomOf="@id/priorityValueTextView"
+        android:background="@color/red"
+        android:text="delete"
+        tools:ignore="MissingConstraints" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
